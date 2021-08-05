@@ -436,7 +436,7 @@ async def play(_, message: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @camilaowner to your Group and try again</b>",
+                                  "\n\nOr manually add @amalavc to your Group and try again</b>",
                               )
                               pass
     try:
@@ -444,7 +444,7 @@ async def play(_, message: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i> @camilaowner Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            f"<i> @amalavc Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return     
     sender_id = message.from_user.id
@@ -460,7 +460,7 @@ async def play(_, message: Message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    await lel.edit("🎵 **Processing**")
+    await lel.edit("🎵 **Processing bass**")
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -491,7 +491,10 @@ async def play(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="Watch On YouTube 🎬",
-                        url=f"{url}")
+                        url=f"{url}"),
+                    InlineKeyboardButton (
+                        text="Amala Support😍',
+                        url="t.me/kittysupport")
 
                 ],
                 [       
@@ -533,7 +536,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="✯Camila ᴍᴜꜱɪᴄ✯▶️ **Playing** here the song requested by {} 😜".format(
+        caption="**Playing** here the song requested by {} 😜, Powered by 𝔸𝕞𝕒𝕝𝕒ᵇᵒᵗ༆".format(
         message.from_user.mention()
         ),
     )
@@ -554,7 +557,7 @@ async def deezer(client: Client, message_: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "camilaowner"
+        user.first_name =  "amalavc"
     usar = user
     wew = usar.id
     try:
@@ -567,7 +570,7 @@ async def deezer(client: Client, message_: Message):
                               invitelink = await client.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Add me as admin of yor group first</b>",
+                                  "<b>Add me as admin of yor group first</b>😒",
                               )
                               return
 
@@ -575,7 +578,7 @@ async def deezer(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>@camilaowner userbot joined your chat</b>",
+                                  "<b>@amalavc userbot joined your chat</b> for playing music🥰",
                               )
 
                           except UserAlreadyParticipant:
@@ -584,7 +587,7 @@ async def deezer(client: Client, message_: Message):
                               #print(e)
                               await lel.edit(
                                   f"<b>🔴 Flood Wait Error 🔴 \nUser {user.first_name} couldn't join your group due to heavy requests for userbot! Make sure user is not banned in group."
-                                  "\n\nOr manually add @camilaowner to your Group and try again</b>",
+                                  "\n\nOr manually add @amalavc to your Group and try again</b>",
                               )
                               pass
     try:
@@ -592,7 +595,7 @@ async def deezer(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            f"<i>Looks like @camilaowner Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
+            f"<i>Looks like @amalavc Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually</i>"
         )
         return                            
     requested_by = message_.from_user.first_name   
@@ -647,9 +650,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"Camila ᴍᴜꜱɪᴄ✯=#️⃣ Queued at position {position}")
+        await res.edit_text(f"Amala ᴍᴜꜱɪᴄ✯=#️⃣ Queued at position {position}")
     else:
-        await res.edit_text("Camila ᴍᴜꜱɪᴄ✯=▶️ Playing.....")
+        await res.edit_text("Amala ᴍᴜꜱɪᴄ✯=▶️ Playing.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
@@ -722,7 +725,7 @@ async def jiosaavn(client: Client, message_: Message):
         #lmoa = await client.get_chat_member(chid,wew)
     except:
         await lel.edit(
-            "<i> @camilaowner helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually! For help contact us at @camila_Support</i>"
+            "<i> @amalavc helper Userbot not in this chat, Ask admin to send /play command for first time or add assistant manually! For help contact us at @camila_Support</i>"
         )
         return     
     requested_by = message_.from_user.first_name
@@ -782,7 +785,7 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"Camila ᴍᴜꜱɪᴄ✯=#️⃣ Queued at position {position} , Made by @xabhish3k",
+            caption=f"Amala ᴍᴜꜱɪᴄ✯=#️⃣ Queued at position {position} , Made by @xabhish3k",
         
         )           
            
