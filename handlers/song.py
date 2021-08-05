@@ -267,7 +267,7 @@ async def jssong(_, message):
         ssingers = songs[0].singers
         await m.edit("Downloading😍")
         song = await download_song(slink)
-        await m.edit("Uploading"🥱)
+        await m.edit("Uploading🥱")
         await message.reply_audio(audio=song, title=sname,
                                   performer=ssingers)
         os.remove(song)
