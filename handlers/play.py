@@ -493,7 +493,7 @@ async def play(_, message: Message):
                         text="Watch On YouTube 🎬",
                         url=f"{url}"),
                     InlineKeyboardButton (
-                        text="Amala Support😍',
+                        text="Amala Support😍",
                         url="t.me/kittysupport")
 
                 ],
