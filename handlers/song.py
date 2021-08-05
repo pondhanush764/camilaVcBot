@@ -32,7 +32,7 @@ def song(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('🔎 Finding the song...')
+    m = message.reply('🔎 Finding your song...')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -51,17 +51,17 @@ def song(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Found Nothing.\n\nTry another keywork or maybe spell it properly."
+            "❌ Found Nothing😒.\n\nTry another keywork or maybe spell it properly."
         )
         print(str(e))
         return
-    m.edit("Downloading the song ")
+    m.edit("Downloading the song😍 ")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = '**🎵 Uploaded by Camila ᴍᴜꜱɪᴄ **'
+        rep = '**🎵 Uploaded by 𝔸𝕞𝕒𝕝𝕒ᵇᵒᵗ༆**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -265,9 +265,9 @@ async def jssong(_, message):
         sname = songs[0].song
         slink = songs[0].media_url
         ssingers = songs[0].singers
-        await m.edit("Downloading")
+        await m.edit("Downloading😍")
         song = await download_song(slink)
-        await m.edit("Uploading")
+        await m.edit("Uploading"🥱)
         await message.reply_audio(audio=song, title=sname,
                                   performer=ssingers)
         os.remove(song)
@@ -295,15 +295,15 @@ async def deezsong(_, message):
     is_downloading = True
     text = message.text.split(None, 1)[1]
     query = text.replace(" ", "%20")
-    m = await message.reply_text("Searching...")
+    m = await message.reply_text("Searching😒...")
     try:
         songs = await arq.deezer(query, 1)
         title = songs[0].title
         url = songs[0].url
         artist = songs[0].artist
-        await m.edit("Downloading")
+        await m.edit("Downloading🥰")
         song = await download_song(url)
-        await m.edit("Uploading")
+        await m.edit("Uploading🥱")
         await message.reply_audio(audio=song, title=title,
                                   performer=artist)
         os.remove(song)
